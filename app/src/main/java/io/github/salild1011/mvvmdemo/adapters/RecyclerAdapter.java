@@ -23,9 +23,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemVi
     private List<Place> places;
     private Context context;
 
-    public RecyclerAdapter(List<Place> places, Context context) {
-        this.places = places;
+    public RecyclerAdapter(Context context, List<Place> places) {
         this.context = context;
+        this.places = places;
     }
 
     @NonNull
