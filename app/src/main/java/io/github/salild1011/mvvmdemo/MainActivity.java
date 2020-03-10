@@ -6,17 +6,13 @@ import android.widget.ProgressBar;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import java.util.List;
-
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.github.salild1011.mvvmdemo.adapters.RecyclerAdapter;
-import io.github.salild1011.mvvmdemo.models.Place;
 import io.github.salild1011.mvvmdemo.viewmodels.MainActivityViewModel;
 
 public class MainActivity extends AppCompatActivity {
