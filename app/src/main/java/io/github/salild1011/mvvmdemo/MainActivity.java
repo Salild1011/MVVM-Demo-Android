@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.github.salild1011.mvvmdemo.adapters.RecyclerAdapter;
+import io.github.salild1011.mvvmdemo.models.Place;
 import io.github.salild1011.mvvmdemo.viewmodels.MainActivityViewModel;
 
 public class MainActivity extends AppCompatActivity {
@@ -33,8 +34,22 @@ public class MainActivity extends AppCompatActivity {
         viewModel = new ViewModelProvider(this).get(MainActivityViewModel.class);
 
         viewModel.init();
-        viewModel.getPlaces().observe(this, places -> {
-            recyclerAdapter.notifyDataSetChanged();
+        viewModel.getPlaces().observe(this, places -> recyclerAdapter.notifyDataSetChanged());
+
+        viewModel.getIsUpdating().observe(this, isUpdating -> {
+            if (isUpdating) {
+                showProgressBar();
+            } else {
+                hideProgressBar();
+                recyclerView.smoothScrollToPosition(viewModel.getPlaces().getValue().size() - 1);
+            }
+        });
+
+        floatingActionButton.setOnClickListener(view -> {
+                viewModel.addNewValue(new Place(
+                        "Washington",
+                        "https://i.redd.it/k98uzl68eh501.jpg"
+                ));
         });
 
         initRecyclerView();
