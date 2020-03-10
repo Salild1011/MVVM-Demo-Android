@@ -31,7 +31,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemVi
     @NonNull
     @Override
     public ItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item, parent);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item, parent, false);
         return new ItemViewHolder(view);
     }
 
@@ -47,8 +47,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemVi
     }
 
     static class ItemViewHolder extends RecyclerView.ViewHolder {
-        @BindView(R.id.image_view) private ImageView imageView;
-        @BindView(R.id.title_text_view) private TextView textView;
+        @BindView(R.id.image_view) ImageView imageView;
+        @BindView(R.id.title_text_view) TextView textView;
 
         ItemViewHolder(@NonNull View itemView) {
             super(itemView);

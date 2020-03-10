@@ -21,9 +21,9 @@ import io.github.salild1011.mvvmdemo.viewmodels.MainActivityViewModel;
 
 public class MainActivity extends AppCompatActivity {
 
-    @BindView(R.id.recycler_view) private RecyclerView recyclerView;
-    @BindView(R.id.progress_circular) private ProgressBar progressBar;
-    @BindView(R.id.floating_action_button) private FloatingActionButton floatingActionButton;
+    @BindView(R.id.recycler_view) RecyclerView recyclerView;
+    @BindView(R.id.progress_circular) ProgressBar progressBar;
+    @BindView(R.id.floating_action_button) FloatingActionButton floatingActionButton;
 
     private RecyclerAdapter recyclerAdapter;
     private MainActivityViewModel viewModel;
@@ -35,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         viewModel = new ViewModelProvider(this).get(MainActivityViewModel.class);
+
+        viewModel.init();
         viewModel.getPlaces().observe(this, places -> {
             recyclerAdapter.notifyDataSetChanged();
         });

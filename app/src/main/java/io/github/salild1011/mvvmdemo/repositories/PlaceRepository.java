@@ -30,36 +30,36 @@ public class PlaceRepository {
 
     private void setPlaces() {
         dataSet.add(
-                new Place("https://c1.staticflickr.com/5/4636/25316407448_de5fbf183d_o.jpg",
-                        "Havasu Falls")
+                new Place("Havasu Falls",
+                        "https://c1.staticflickr.com/5/4636/25316407448_de5fbf183d_o.jpg")
         );
         dataSet.add(
-                new Place("https://i.redd.it/tpsnoz5bzo501.jpg",
-                        "Trondheim")
+                new Place("Trondheim",
+                        "https://i.redd.it/tpsnoz5bzo501.jpg")
         );
         dataSet.add(
-                new Place("https://i.redd.it/qn7f9oqu7o501.jpg",
-                        "Portugal")
+                new Place("Portugal",
+                        "https://i.redd.it/qn7f9oqu7o501.jpg")
         );
         dataSet.add(
-                new Place("https://i.redd.it/j6myfqglup501.jpg",
-                        "Rocky Mountain National Park")
+                new Place("Rocky Mountain National Park",
+                        "https://i.redd.it/j6myfqglup501.jpg")
         );
         dataSet.add(
-                new Place("https://i.redd.it/0h2gm1ix6p501.jpg",
-                        "Havasu Falls")
+                new Place("Havasu Falls",
+                        "https://i.redd.it/0h2gm1ix6p501.jpg")
         );
         dataSet.add(
-                new Place("https://i.redd.it/k98uzl68eh501.jpg",
-                        "Mahahual")
+                new Place("Mahahual",
+                        "https://i.redd.it/k98uzl68eh501.jpg")
         );
         dataSet.add(
-                new Place("https://c1.staticflickr.com/5/4636/25316407448_de5fbf183d_o.jpg",
-                        "Frozen Lake")
+                new Place("Frozen Lake",
+                        "https://c1.staticflickr.com/5/4636/25316407448_de5fbf183d_o.jpg")
         );
         dataSet.add(
-                new Place("https://i.redd.it/obx4zydshg601.jpg",
-                        "Austrailia")
+                new Place("Austrailia",
+                        "https://i.redd.it/obx4zydshg601.jpg")
         );
     }
 }
