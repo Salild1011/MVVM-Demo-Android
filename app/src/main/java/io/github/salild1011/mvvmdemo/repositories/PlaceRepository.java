@@ -30,10 +30,6 @@ public class PlaceRepository {
 
     private void setPlaces() {
         dataSet.add(
-                new Place("Havasu Falls",
-                        "https://c1.staticflickr.com/5/4636/25316407448_de5fbf183d_o.jpg")
-        );
-        dataSet.add(
                 new Place("Trondheim",
                         "https://i.redd.it/tpsnoz5bzo501.jpg")
         );
@@ -54,11 +50,7 @@ public class PlaceRepository {
                         "https://i.redd.it/k98uzl68eh501.jpg")
         );
         dataSet.add(
-                new Place("Frozen Lake",
-                        "https://c1.staticflickr.com/5/4636/25316407448_de5fbf183d_o.jpg")
-        );
-        dataSet.add(
-                new Place("Austrailia",
+                new Place("Australia",
                         "https://i.redd.it/obx4zydshg601.jpg")
         );
     }

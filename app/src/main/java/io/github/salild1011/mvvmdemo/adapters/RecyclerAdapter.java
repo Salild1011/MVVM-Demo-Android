@@ -1,6 +1,7 @@
 package io.github.salild1011.mvvmdemo.adapters;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,7 +39,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemVi
     @Override
     public void onBindViewHolder(@NonNull ItemViewHolder holder, int position) {
         holder.textView.setText(places.get(position).getTitle());
-        Picasso.get().load(places.get(position).getImageUrl()).into(holder.imageView);
+        Picasso.get().load(places.get(position).getImageUrl()).fit().into(holder.imageView);
     }
 
     @Override
